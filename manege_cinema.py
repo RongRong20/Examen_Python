@@ -19,9 +19,12 @@ class Cinema:
           - Cada fila tiene un diccionario para representar las butacas de esa fila.
           - Las claves del diccionario son cada una de las butacas de esa fila (1, 2, 3, etc.).
         """        
-        row = { i : None for i in range(1, self.__seats_per_row+1) }        
+        row = { i : None for i in range(1, self.__seats_per_row+1) }
+               
         for j in range(1, self.__rows+1):
-            self.__seating.append(row)
+            dic = {} 
+            dic.update(row)
+        self.__seating = dic
         
     def print_seating(self):
         """

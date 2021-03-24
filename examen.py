@@ -74,17 +74,21 @@ e = Libro(2, "La casa de los espíritus", 2010)
 lista.append({e.get_titulo():e.get_anyo()})
 r = Libro(3, "Habia una vez", 2003)
 lista.append({r.get_titulo():r.get_anyo()})
-print(lista)
+#print(lista)
 d = []
 def mas_antiguos(a):
     if a>2021 or a<1900:
         raise ValueError("el año introducido es mayor de 2021 o menor de 1900")
     else:
         for x in lista:
+           for i in x.keys():
+               if x[i] < a:
+                   d.append(i)
 
-            if 
+    return d
 
 
-mas_antiguos(1999)
+new = mas_antiguos(2004)
+print(new)
 
     
