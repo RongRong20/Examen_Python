@@ -1,0 +1,5 @@
+hola
+pero
+sal,hotel
+dos
+basura,casa
