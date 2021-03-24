@@ -8,17 +8,44 @@ indicando que el fichero esta vacıo.'''
 
 def get_list(nom):
     f = open(nom, mode="rt", encoding="utf-8")
+    
     texto = f.read()
     
     a = texto.split("\n")
     b =[]
+    dic = {}
     for x in a:
-        print(x,"x")
+        #print(x,"x")
         b.append(x.split(","))
-    print(b,"b")
-    print(a,"a")
-    
+    #print(b,"b")
+    #print(a,"a")
+    g = 0
+    for s in b:
+        if len(s) >=2:
+            for d in s:
+                print(d,"d")
+                print(len(d),"lend")
+                if len(d)> g:
+                    g = len(d)
+    print(g,"g")
+    for h in range(g+1):
+        dic.update({h:"None"})
+    print(dic,"dic")
+    for s in b:
+        if len(s) >=2:
+            for d in s:
+                if dic[len(d)] != d:
+                    dic[len(d)]= dic[len(d)]+d
+    print(dic,"dic2")
+                
+               
+        
+                
+
+
+
 
     f.close()
+
 get_list("examen.txt")
     

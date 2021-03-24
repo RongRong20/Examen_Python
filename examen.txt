@@ -1,5 +1,5 @@
-hola
-pero
+hola,moto
+pero,escuela
 sal,hotel
-dos
+dos,mama,hola
 basura,casa
