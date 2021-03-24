@@ -13,18 +13,24 @@ class Cinema:
         self.__seating = []
     
     def create_cinema_seating(self):
+        '''
+        El error aparece porque hay un lista que añade el dic de forma en bucle 
+        como me paso en la clase flight, hay que sacar la lista del bucle y que añada
+        los valores que le corresponde
+        '''
         """
         Inicializa el seating de la sala, que es una lista de diccionarios.
           - Cada elemento de la lista representa una fila de butacas, empezando por la fila 0 que esta en la posicion 0.
           - Cada fila tiene un diccionario para representar las butacas de esa fila.
           - Las claves del diccionario son cada una de las butacas de esa fila (1, 2, 3, etc.).
-        """        
-        row = { i : None for i in range(1, self.__seats_per_row+1) }
-               
-        for j in range(1, self.__rows+1):
-            dic = {} 
-            dic.update(row)
-        self.__seating = dic
+        """
+        
+        dic = {}
+        for i in range(1, self.__seats_per_row+1):
+            
+            dic.update({i:None})        
+        self.__seating.append(dic)
+        print(self.__seating)
         
     def print_seating(self):
         """
